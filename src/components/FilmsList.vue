@@ -15,7 +15,7 @@ export default {
         props: {
         'films': Array
     },
-    componets: {
+    components: {
         FilmCard
     }
 }
