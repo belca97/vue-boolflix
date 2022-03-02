@@ -26,9 +26,8 @@ export default {
 
   methods: {
     getFilms(keyword){
-       console.log(keyword)
       //uso un iterpolazione per richiedere tramite la keyword i films
-      axios.get('https://api.themoviedb.org/3/search/movie/?api_key=35d5e8ab27efec855252b6c0fe9dbdfb&query=' + keyword + '&language=it-IT')
+      axios.get('https://api.themoviedb.org/3/search/movie?api_key=35d5e8ab27efec855252b6c0fe9dbdfb&query=' + keyword + '&language=it-IT')
         .then((response) => {
           this.films = response.data.results;
 

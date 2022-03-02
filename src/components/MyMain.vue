@@ -1,12 +1,12 @@
 <template>
         <main>
-            <FilmsList />
+            <FilmsList :films="films"/>
         </main>
 </template>
 
 <script>
 
-    import FilmsList from  './FilmsList.vue'
+    import FilmsList from './FilmsList.vue'
 
 export default {
 
@@ -14,8 +14,8 @@ export default {
     props: {
         'films': Array
     },
-    componets: {
-      FilmsList
+    components:{
+        FilmsList
     }
 }
 </script>
@@ -27,5 +27,5 @@ export default {
 main{
     height: 90vh;
     background-color: $colorMain;
-}
+    }
 </style>

@@ -4,7 +4,7 @@
             <h1>BOOLFIX</h1>
             <form>
                 <input type="text" v-model="searchText">
-                <button type='submit' @click.prevent="('search', searchText)">Ricerca</button>
+                <button type='submit' @click.prevent="search">Ricerca</button>
             </form>
         </header>
 </template>
@@ -15,6 +15,11 @@ export default {
     data(){
         return{
             searchText: '',
+        }
+    },
+    methods:{
+        search(){
+            this.$emit('search', this.searchText)
         }
     }
 }
